@@ -1,0 +1,37 @@
+/* typography grid: 20px offset 0 */
+
+$colorBlue: #392863;
+$colorRed: #ff4444;
+$colorBlack: #101010;
+$colorGreen: #222222;;
+$colorGreyDark: #333;
+$colorWhite: #fefefe;
+$colorYellow: #ff9a18;
+
+// $fontFira: 'Fira Mono', monospace;
+$fontAcre: 'Acre', sans-serif;
+$fontOpenSans: 'Open Sans', sans-serif;
+$fontBreeSerif: 'Bree Serif', serif;
+// $fontDroid: '"Droid Sans", "Helvetica Neue", Helvetica,Arial,sans-serif';
+// $fontMontserrat: 'Montserrat, "Helvetica Neue",Helvetica,Arial,sans-serif';
+// $fontRoboto: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
+// $fontLato: "Lato",Helvetica,Arial,sans-serif;
+
+$sizeFactor: 1.618033988749895; // phi
+// $sizeFactor: 1.4142135623730951; // sqrt(2) 
+
+$fontSizeNormal: 1.5rem;
+$fontSizeTitle: $fontSizeNormal * ($sizeFactor * $sizeFactor * $sizeFactor);
+$fontSizeHuge: $fontSizeNormal * ($sizeFactor * $sizeFactor );
+$fontSizeBig: $fontSizeNormal * $sizeFactor;
+$fontSizeSmall: $fontSizeNormal / $sizeFactor;
+
+/* Define primary & secondary values */
+$colorPrimary: $colorBlack;
+$colorSecondary: $colorRed;
+$colorTertiary: $colorGreen;
+
+$fontPrimary: $fontAcre; //fontBreeSerif;
+$fontSecondary: $fontOpenSans;
+
+

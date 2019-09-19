@@ -1,28 +1,37 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <fi-navigation />
+    <router-view></router-view>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script lang="ts">
+import { Component, Vue } from 'vue-property-decorator';
+import FiNavigation from './components/Navigation.vue';
 
-export default {
-  name: 'app',
+@Component({
   components: {
-    HelloWorld
+    FiNavigation,
+  },
+  mounted() {
+ //   console.log("TODO: load data from JSON")
   }
-}
+})
+export default class App extends Vue {}
 </script>
 
-<style>
+<style lang="scss">
+@import "@/styles/_base.scss";
+
+html,body {
+  font-size: 10px;
+  line-height: 1.25;
+  overflow-x: hidden;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: $fontPrimary;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
