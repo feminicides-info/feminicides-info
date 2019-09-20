@@ -1,9 +1,5 @@
 <template>
   <fi-block theme="light" class="block-home-stats-country">
-    <div class="container">
-      <div class="intro-text">
-      </div>
-    </div>
   </fi-block>
 </template>
 
@@ -29,7 +25,7 @@ export default class FiHomeStatsCountry extends Vue {}
 <style lang="scss" scoped>
 @import "@/styles/_base.scss";
 
-.block-home-meaning {
+.block-home-stats-country {
   @include blockblood;
 
   text-align: center;

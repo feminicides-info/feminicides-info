@@ -2,7 +2,6 @@
 @mixin blockblood {
   box-sizing: border-box;
   border-bottom: 5px solid $colorRed;
-  padding: 100px 0;
   position: relative;
 
   &::after {

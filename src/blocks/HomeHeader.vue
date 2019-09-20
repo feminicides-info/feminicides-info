@@ -35,6 +35,7 @@ export default class FiHomeHeader extends Vue {}
 @import "@/styles/_base.scss";
 
 .block-home-header {
+  @include blockblood;
   text-align: center;
 
   .container {
@@ -46,8 +47,6 @@ export default class FiHomeHeader extends Vue {}
     flex-direction: column;
     justify-content: center;
     height: 100%;
-    padding-top: 40px;
-    padding-bottom: 50px;
 
     .intro-lead-in {
       display: block;
@@ -90,19 +89,14 @@ export default class FiHomeHeader extends Vue {}
     }
 
     .intro-description {
-      margin-bottom: 2rem;
+      // margin-bottom: 2rem;
       font-family:  $fontPrimary;
       font-size: 2.2rem;
       color:  inherit;
       line-height: 1.35;
     }
-
-    .btn {
-      overflow: hidden;
-    }
   }
 
-  max-height: 90vh;
 }
 </style>
 

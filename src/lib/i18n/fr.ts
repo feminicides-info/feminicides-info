@@ -9,10 +9,26 @@ export const messages = {
       "by_their_husbands": "par son conjoint ou son ex-conjoint. | par leur conjoint ou leur ex-conjoint."
     },
     "meaning": {
-      "what_does_it_means": "Ça veut dire quoi ?",
+      "_title": "Ça veut dire quoi ?",
       "this_year": "Cette année",
       "previous_year": "L'année dernière",
-      "on_the_period": "Sur la période du 1er janvier au {date}, en France"
+      "on_the_period": "…sur la période du 1er janvier au {date}, en France",
+      "if_projected": "Si l'on fait une projection, <span class='highlight'>ce seront {estimation_current_year_counter} féminicides</span>,",
+      "projected_more": "soit {estimation_difference_counter} féminicides de plus que l'année précédente.",
+      "projected_less": "soit {estimation_difference_counter} féminicides de moins que l'année précédente.",
+      "projected_same": "soit autant de féminicides de moins que l'année précédente.",
+      "thus_a_woman_dies": "<span class='highlight'>Une femme meurt tous les {rythm_counter} jours</span> en moyenne."
+    },
+    "stats_year": {
+      "_title": "Nombre de féminicides par an",
+      "legend": "Dépassement de la moyenne des années précédentes"
+    },
+    "stats_country": {
+      "_title": "Les pays où sont commis les plus de féminicides",
+      "france": "France",
+      "italy": "Italie",
+      "germany": "Allemagne",
+      "belgium": "Belgique"
     }
   },
   "contribute": {
@@ -24,6 +40,10 @@ export const messages = {
 }
 
 export const dateTimeFormats = {
+  short_no_year: {
+    month: 'long', 
+    day: 'numeric'
+  },
   short: {
     year: 'numeric', 
     month: 'long', 

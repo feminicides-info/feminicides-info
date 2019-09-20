@@ -35,17 +35,25 @@ export default class FiBlock extends Vue {
 @import "@/styles/_base.scss";
 
 .fi-block {
-  @include blockblood;
   text-align: left;
+  // min-height: 80vh;
+  padding: 75px 0;
 
   & > .title {
     font-size: $fontSizeBig;
     text-align: center;
+    margin-bottom: 4rem;
   }
 
   & > .subtitle {
     text-align: center;
   }
+
+  /deep/ .highlight {
+    color: $colorRed;
+    font-weight: bold;
+  }
+
   &.theme-light {
     color: $colorBlack;
     background-color: $colorWhite;
@@ -56,5 +64,8 @@ export default class FiBlock extends Vue {
     background-color: $colorBlack;
   }
 
+  @include media-breakpoint-up(sm) {
+    padding: 100px 0;
+  }
 }
 </style>

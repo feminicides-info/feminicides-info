@@ -28,7 +28,8 @@ export default class App extends Vue {}
 <style lang="scss">
 @import "@/styles/_base.scss";
 
-html,body {
+html,
+body {
   font-size: 10px;
   line-height: 1.25;
   overflow-x: hidden;
@@ -36,6 +37,7 @@ html,body {
 
 #app {
   font-family: $fontPrimary;
+  font-size: $fontSizeNormal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
