@@ -27,7 +27,7 @@ import { Component, Vue } from 'vue-property-decorator'
 import { routes } from '@/lib/router'
 
 @Component
-export default class Navigation extends Vue {
+export default class FiNavigation extends Vue {
   //  @Prop() private msg!: string;
   routes = routes
 }
@@ -38,9 +38,12 @@ export default class Navigation extends Vue {
 @import "@/styles/_base.scss";
 
 .fi-navigation {
+  min-height: 60px;
+  padding-top: 15px;
   background-color: white;
   border-bottom: 5px solid $colorRed;
   font-size: $fontSizeNormal;
+  align-items: flex-start;
 
   .navbar-brand img {
     width: 200px;
@@ -84,7 +87,7 @@ export default class Navigation extends Vue {
         }
 
         & > a {
-          padding-top: 1.6rem;
+          padding-top: 0.9rem;
           padding-left: 1rem;
           padding-right: 1rem;
         }

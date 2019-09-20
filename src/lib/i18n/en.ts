@@ -1,4 +1,4 @@
-const messages = {
+export const messages = {
 	"home": {
 		"header": {
 			"lead_in": "Since 1st januart, in France",
@@ -14,5 +14,19 @@ const messages = {
 	}
 }
 
-export default messages
+export const dateTimeFormats = {
+  short: {
+    year: 'numeric', 
+    month: 'short', 
+    day: 'numeric'
+  },
+  long: {
+    year: 'numeric', 
+    month: 'short', 
+    day: 'numeric',
+    weekday: 'short', 
+    hour: 'numeric', 
+    minute: 'numeric'
+  }
+}
 

@@ -1,5 +1,5 @@
 <template>
-  <header class="block-header-home">
+  <fi-block theme="dark" class="block-home-header">
     <div class="container">
       <div class="intro-text">
         <span class="intro-lead-in">{{ $t('home.header.since_1st_jan') }}</span>
@@ -9,11 +9,12 @@
         <span class="intro-description">{{ $tc('home.header.by_their_husbands', counter) }}</span>
       </div>
     </div>
-  </header>
+  </fi-block>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
+import FiBlock from '@/components/Block.vue';
 
 @Component({
   data: () => {
@@ -22,22 +23,19 @@ import { Component, Vue } from 'vue-property-decorator';
     }
   },
   components: {
+    FiBlock
   },
 })
-export default class HeaderHome extends Vue {}
+
+export default class FiHomeHeader extends Vue {}
+
 </script>
 
 <style lang="scss" scoped>
 @import "@/styles/_base.scss";
 
-.block-header-home {
+.block-home-header {
   text-align: center;
-  color: $colorWhite;
-  background-attachment: scroll;
-  background-color: $colorBlack;
-  background-position: center 10%;
-  background-repeat: no-repeat;
-  background-size: cover;
 
   .container {
     height: 100%;

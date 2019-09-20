@@ -1,4 +1,4 @@
-const messages = {
+export const messages = {
   "home": {
     "_title": "Accueil",
     "header": {
@@ -7,6 +7,12 @@ const messages = {
       "women": "femme | femmes",
       "were_assassinated": "est morte, assassinée | sont mortes assassinées",
       "by_their_husbands": "par son conjoint ou son ex-conjoint. | par leur conjoint ou leur ex-conjoint."
+    },
+    "meaning": {
+      "what_does_it_means": "Ça veut dire quoi ?",
+      "this_year": "Cette année",
+      "previous_year": "L'année dernière",
+      "on_the_period": "Sur la période du 1er janvier au {date}, en France"
     }
   },
   "contribute": {
@@ -17,4 +23,18 @@ const messages = {
   }
 }
 
-export default messages
+export const dateTimeFormats = {
+  short: {
+    year: 'numeric', 
+    month: 'long', 
+    day: 'numeric'
+  },
+  long: {
+    year: 'numeric', 
+    month: 'short', 
+    day: 'numeric',
+    weekday: 'short', 
+    hour: 'numeric', 
+    minute: 'numeric'
+  }
+}

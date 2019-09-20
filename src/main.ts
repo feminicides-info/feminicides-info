@@ -3,7 +3,7 @@ import App from './App.vue'
 
 // Load I18N
 import VueI18n from 'vue-i18n'
-import i18nMessages from './lib/i18n/'
+import * as i18nData from './lib/i18n/'
 
 // Load Bootstrap
 import BootstrapVue from 'bootstrap-vue'
@@ -22,7 +22,8 @@ Vue.config.productionTip = false
 // Create VueI18n instance with options
 const i18n = new VueI18n({
   locale: 'fr', // set locale
-  messages: i18nMessages, // set locale messages
+  messages: i18nData.messages, // set locale messages
+  dateTimeFormats: i18nData.dateTimeFormats
 })
 
 new Vue({

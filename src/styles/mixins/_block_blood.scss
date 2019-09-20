@@ -1,0 +1,21 @@
+
+@mixin blockblood {
+  box-sizing: border-box;
+  border-bottom: 5px solid $colorRed;
+  padding: 100px 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: $colorRed;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 17px);
+    z-index: 10;
+  }
+}
+

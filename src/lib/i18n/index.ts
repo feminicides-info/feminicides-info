@@ -1,8 +1,13 @@
 
-import fr from './fr'
-import en from './en'
+import * as fr from './fr'
+import * as en from './en'
 
-export default {
-  fr: fr,
-  en: en
+export const messages = {
+  fr: fr.messages,
+  en: en.messages
+}
+
+export const dateTimeFormats = {
+  fr: fr.dateTimeFormats,
+  en: en.dateTimeFormats
 }
