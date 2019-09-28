@@ -20,7 +20,7 @@ $fontBreeSerif: 'Bree Serif', serif;
 $sizeFactor: 1.618033988749895; // phi
 // $sizeFactor: 1.4142135623730951; // sqrt(2) 
 
-$fontSizeNormal: 1.5rem;
+$fontSizeNormal: 1.6rem;
 $fontSizeTitle: $fontSizeNormal * ($sizeFactor * $sizeFactor * $sizeFactor);
 $fontSizeHuge: $fontSizeNormal * ($sizeFactor * $sizeFactor );
 $fontSizeBig: $fontSizeNormal * $sizeFactor;

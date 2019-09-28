@@ -40,6 +40,9 @@ export const messages = {
 }
 
 export const dateTimeFormats = {
+  short_month: {
+    month: 'short', 
+  },
   short_no_year: {
     month: 'long', 
     day: 'numeric'

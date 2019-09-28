@@ -35,7 +35,7 @@ export const routes = [
     name: 'help',
     component: Help,
     meta: {
-      title: titlePrefix + ' - Nous soutenir',
+      title: titlePrefix + ' - Aider',
       requireAuth: false
     }
   },

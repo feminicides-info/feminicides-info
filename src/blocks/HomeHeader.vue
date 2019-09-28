@@ -1,14 +1,14 @@
 <template>
   <fi-block theme="dark" class="block-home-header">
-    <div class="container">
-      <div class="intro-text">
+    <b-row class="intro-text">
+      <b-col>
         <span class="intro-lead-in">{{ $t('home.header.since_1st_jan') }}</span>
         <span class="intro-heading">{{ counter }}</span>
         <span class="intro-lead-out">{{ $tc('home.header.women', counter) }}</span>
         <span class="intro-subtitle">{{ $tc('home.header.were_assassinated', counter) }}</span>
         <span class="intro-description">{{ $tc('home.header.by_their_husbands', counter) }}</span>
-      </div>
-    </div>
+      </b-col>
+    </b-row>
   </fi-block>
 </template>
 
@@ -80,6 +80,7 @@ export default class FiHomeHeader extends Vue {}
     }
 
     .intro-subtitle {
+      display: block;
       margin-bottom: 0rem;
       font-family:  $fontPrimary;
       font-weight: bolder;
@@ -89,6 +90,7 @@ export default class FiHomeHeader extends Vue {}
     }
 
     .intro-description {
+      display: block;
       // margin-bottom: 2rem;
       font-family:  $fontPrimary;
       font-size: 2.2rem;
@@ -96,7 +98,6 @@ export default class FiHomeHeader extends Vue {}
       line-height: 1.35;
     }
   }
-
 }
 </style>
 

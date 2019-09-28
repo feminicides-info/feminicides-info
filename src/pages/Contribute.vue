@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="page-contribute">
   </div>
 </template>
 

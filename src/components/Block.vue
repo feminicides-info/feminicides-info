@@ -6,11 +6,13 @@
       'theme-light': theme === 'light',
       'theme-dark': theme === 'dark'
     }">
-    <template v-if="title">
-      <h2 class="title">{{ title }}</h2>
-      <div v-if="subtitle" class="subtitle">{{ subtitle }}</div>
-    </template>
-    <slot></slot>
+    <b-container>
+      <template v-if="title">
+        <h2 class="title">{{ title }}</h2>
+        <div v-if="subtitle" class="subtitle">{{ subtitle }}</div>
+      </template>
+      <slot></slot>
+    </b-container>
   </div>
 </template>
 

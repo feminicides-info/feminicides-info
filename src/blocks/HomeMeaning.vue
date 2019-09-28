@@ -36,7 +36,9 @@
       </b-row>
       <b-row>
         <b-col cols="12">
-          <p>{{ $t('home.meaning.on_the_period',  { date: $d( new Date(), 'short_no_year') }) }}</p>
+          <p>{{ $t('home.meaning.on_the_period',  {
+                  date: $d( new Date(), 'short_no_year')
+                }) }}</p>
           <p v-html="$t('home.meaning.if_projected',  { estimation_current_year_counter }) + ' ' + $t('home.meaning.projected_' + more_same_less, { estimation_difference_counter })">
           </p>
           <p v-html="$t('home.meaning.thus_a_woman_dies',  { rythm_counter })"></p>
