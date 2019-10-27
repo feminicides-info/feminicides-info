@@ -11,7 +11,7 @@ RUN apk update \
 
 RUN git clone https://github.com/glenux/feminicides-info-cli/ /app \
 	&& cd /app \
-	&& git checkout 4ed9908b2c0f8ada1ad2b5154df43f1570c39104 \
+	&& git checkout df198d31b4c572bc8b7329180b14094208e1b4b7 \
 	&& go mod download \
  	&& make
 
@@ -20,11 +20,13 @@ RUN git clone https://github.com/glenux/feminicides-info-cli/ /app \
 ##
 FROM node:12 AS build_site
 
-COPY . /app
+COPY package.json /app/package.json
 
 WORKDIR /app
-RUN npm install \
-	&& npm run build
+RUN npm install
+
+COPY . /app
+RUN npm run build
 
 
 ##
@@ -34,7 +36,7 @@ FROM nginx:1.17-alpine
 
 RUN rm -fr /usr/share/nginx/html
 RUN apk update \
-	&& apk add dcron \
+	&& apk add dcron ca-certificates \
 	&& rm -rf /var/cache/apk/*
 
 RUN mkdir -p /var/log/cron \
@@ -44,8 +46,8 @@ RUN mkdir -p /var/log/cron \
 
 COPY --from=build_collector /app/fi-cli /usr/bin/fi-cli
 COPY --from=build_site /app/dist/ /usr/share/nginx/html
-COPY docker/crontab /etc/crontab2
 COPY docker/entrypoint.sh /app/entrypoint.sh
+COPY docker/crontab /etc/cron.d/feminicides-update
 
 CMD ["/app/entrypoint.sh"]
 
