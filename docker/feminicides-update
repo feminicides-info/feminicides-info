@@ -9,10 +9,12 @@ YEAR="${2:-}"
 
 if [ -z "$WWW_DIR" ]; then
 	>&2 echo "ERROR: Please set destination directory"
+	exit 1
 fi
 
 if [ -z "$YEAR" ]; then
 	>&2 echo "ERROR: Please set year (number|all|current)"
+	exit 1
 fi
 
 case "$YEAR" in

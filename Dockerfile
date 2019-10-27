@@ -46,6 +46,7 @@ RUN mkdir -p /var/log/cron \
 
 COPY --from=build_collector /app/fi-cli /usr/bin/fi-cli
 COPY --from=build_site /app/dist/ /usr/share/nginx/html
+COPY docker/feminicides-update /usr/bin/feminicides-update
 COPY docker/entrypoint.sh /app/entrypoint.sh
 COPY docker/crontab /etc/cron.d/feminicides-update
 
